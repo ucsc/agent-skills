@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (in case scripts or tests are added later)
+node_modules/
+npm-debug.log*
+
+# Local Claude settings (personal, not shared)
+.claude/settings.local.json
+
+# Created when you test an install inside this repo with `npx skills add .`
+.agents/
+.claude/skills/
+skills-lock.json
+
+# Secrets
+.env
+.env.*

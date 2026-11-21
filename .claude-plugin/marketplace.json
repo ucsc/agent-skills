@@ -1,0 +1,25 @@
+{
+  "name": "ucsc-agent-skills",
+  "owner": {
+    "name": "UC Santa Cruz"
+  },
+  "metadata": {
+    "description": "Agent skills from UC Santa Cruz communications team"
+  },
+  "plugins": [
+    {
+      "name": "ucsc-brand",
+      "description": "UC Santa Cruz visual identity: colors, typography, logo rules, voice, and theme token values",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/ucsc-brand"]
+    },
+    {
+      "name": "ucsc-spec",
+      "description": "Write and maintain feature specs as GitHub issues",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/ucsc-spec"]
+    }
+  ]
+}
