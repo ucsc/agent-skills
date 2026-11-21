@@ -30,8 +30,8 @@ A spec is one GitHub issue, in the repo where the work will happen, with the lab
    - Is there an approach already in mind, or one already ruled out?
 3. **Draft the spec** with the template below and show it to the user.
 4. **Create the issue** after the user approves.
-   `gh issue create --title "Spec: <short name>" --label spec --body-file <file>`
-   If the label does not exist: `gh label create spec --description "Feature or change spec"`
+   `gh issue create --title "<short name>" --label spec --body-file <file>`
+   If the label does not exist: `gh label create spec --description "Feature or change specification"`
 5. **Give the user the issue link.**
 
 ## Template
