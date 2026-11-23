@@ -20,6 +20,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./skills/ucsc-spec"]
+    },
+    {
+      "name": "ucsc-git-commit",
+      "description": "Write and validate concise git commit messages.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/ucsc-git-commit"]
     }
   ]
 }
