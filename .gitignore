@@ -14,7 +14,7 @@ npm-debug.log*
 .claude/settings.local.json
 
 # Created when you test an install inside this repo with `npx skills add .`
-.agents/
+.agents/skills/
 .claude/skills/
 skills-lock.json
 
