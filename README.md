@@ -1,6 +1,6 @@
 # UC Santa Cruz agent skills
 
-Three skills for AI coding agents, including OpenAI Codex, Claude Code, and Cursor, in the [skills.sh](https://skills.sh) format. Install only the ones you want, or install all three as a Codex plugin.
+Four skills for AI coding agents, including OpenAI Codex, Claude Code, and Cursor, in the [skills.sh](https://skills.sh) format. Install only the ones you want, or install all four as a Codex plugin.
 
 ## Skills
 
@@ -9,6 +9,7 @@ Three skills for AI coding agents, including OpenAI Codex, Claude Code, and Curs
 | `ucsc-brand` | UC Santa Cruz visual identity: colors, typography, logo rules, voice, and the token values from the `ucsc-2022` theme. |
 | `ucsc-spec` | Write and maintain feature specs as GitHub issues. Also moves an old `ROADMAP.md` into specs. Needs the `gh` command line tool. |
 | `ucsc-git-commit` | Write and check short git commit messages: Conventional Commits format, plain English (ASD-STE100 rules), no repeated spec details, and no AI attribution. |
+| `ucsc-pull-request` | Write and check short pull request descriptions: what changed, why, and how to test it, plain English (ASD-STE100 rules), a link to the spec instead of a copy, and no AI attribution. Needs the `gh` command line tool. |
 
 ## Installation
 
@@ -45,11 +46,12 @@ npx skills update
 /plugin install ucsc-brand --marketplace ucsc/agent-skills
 /plugin install ucsc-spec --marketplace ucsc/agent-skills
 /plugin install ucsc-git-commit --marketplace ucsc/agent-skills
+/plugin install ucsc-pull-request --marketplace ucsc/agent-skills
 ```
 
 ### Install in OpenAI Codex
 
-With a Codex CLI that supports `codex plugin`, install the plugin to get all three skills (`ucsc-brand`, `ucsc-spec`, and `ucsc-git-commit`):
+With a Codex CLI that supports `codex plugin`, install the plugin to get all four skills (`ucsc-brand`, `ucsc-spec`, `ucsc-git-commit`, and `ucsc-pull-request`):
 
 ```sh
 codex plugin marketplace add ucsc/agent-skills
@@ -62,10 +64,10 @@ Or use the skills CLI to choose skills for Codex:
 npx skills add ucsc/agent-skills -a codex
 ```
 
-To install all three without the selection prompt:
+To install all four without the selection prompt:
 
 ```sh
-npx skills add ucsc/agent-skills -a codex --skill ucsc-brand ucsc-spec ucsc-git-commit -y
+npx skills add ucsc/agent-skills -a codex --skill ucsc-brand ucsc-spec ucsc-git-commit ucsc-pull-request -y
 ```
 
 To install only one, pass its name to `--skill`:
@@ -76,7 +78,7 @@ npx skills add ucsc/agent-skills -a codex --skill ucsc-spec
 
 The skills CLI installs into `.agents/skills/` in your current project. Add `-g` to install for all your projects.
 
-In Codex, type `$` to choose an installed skill, or invoke `$ucsc-brand`, `$ucsc-spec`, or `$ucsc-git-commit` in a prompt. If the skills do not appear, restart Codex. The spec skill also needs an installed and authenticated `gh` command line tool.
+In Codex, type `$` to choose an installed skill, or invoke `$ucsc-brand`, `$ucsc-spec`, `$ucsc-git-commit`, or `$ucsc-pull-request` in a prompt. If the skills do not appear, restart Codex. The spec and pull request skills also need an installed and authenticated `gh` command line tool.
 
 See OpenAI's [skill documentation](https://developers.openai.com/codex/skills) and [plugin packaging documentation](https://developers.openai.com/plugins/build/plugins) for discovery and plugin setup.
 
@@ -88,7 +90,7 @@ List the skills available from GitHub without installing them:
 npx skills add ucsc/agent-skills --list
 ```
 
-When checking changes in a local clone, run `npx skills add . --list` from the repository root. The list should contain exactly the three skills in the table above.
+When checking changes in a local clone, run `npx skills add . --list` from the repository root. The list should contain exactly the four skills in the table above.
 
 ### Install in Google Gemini CLI
 
