@@ -1,7 +1,7 @@
 {
   "name": "ucsc-agent-skills",
-  "version": "0.1.0",
-  "description": "Agent skills from the UC Santa Cruz communications team: brand identity, specs as GitHub issues, and git commit messages.",
+  "version": "0.2.0",
+  "description": "Agent skills from the UC Santa Cruz communications team: brand identity, specs as GitHub issues, git commit messages, and pull requests.",
   "author": {
     "name": "UC Santa Cruz"
   },
@@ -10,7 +10,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "UCSC Agent Skills",
-    "shortDescription": "UC Santa Cruz brand, spec, and commit message skills.",
+    "shortDescription": "UC Santa Cruz brand, spec, commit, and pull request skills.",
     "developerName": "UC Santa Cruz",
     "category": "Productivity"
   }

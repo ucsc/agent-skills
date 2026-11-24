@@ -27,6 +27,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./skills/ucsc-git-commit"]
+    },
+    {
+      "name": "ucsc-pull-request",
+      "description": "Write and validate short pull request descriptions: what changed, why, and how to test it.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/ucsc-pull-request"]
     }
   ]
 }
