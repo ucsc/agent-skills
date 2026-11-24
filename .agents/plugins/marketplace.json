@@ -6,8 +6,8 @@
   "plugins": [
     {
       "name": "ucsc-agent-skills",
-      "version": "0.1.0",
-      "description": "UC Santa Cruz brand identity, specs as GitHub issues, and git commit messages.",
+      "version": "0.2.0",
+      "description": "UC Santa Cruz brand identity, specs as GitHub issues, git commit messages, and pull requests.",
       "source": {
         "source": "local",
         "path": "./"
