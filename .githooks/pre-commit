@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+
+readme=$(git show :README.md)
+skill_paths=$(git ls-files --cached -- 'skills/*/SKILL.md')
+
+# Compare the staged skill directories with the rows in the README's Skills table.
+printf '%s\n' "$readme" | SKILL_PATHS="$skill_paths" awk -F '|' '
+    /^## / { in_skills = ($0 ~ /^## Skills[[:space:]]*$/) }
+    in_skills && /^\|/ && $2 ~ /^[[:space:]]*`[a-z0-9-]+`[[:space:]]*$/ {
+        gsub(/[[:space:]`]/, "", $2)
+        listed[$2] = 1
+    }
+    END {
+        count = split(ENVIRON["SKILL_PATHS"], files, "\n")
+        for (i = 1; i <= count; i++) {
+            if (split(files[i], parts, "/") != 3) continue
+            if (!(parts[2] in listed)) {
+                print "Missing from README.md Skills table: " parts[2]
+                failed = 1
+            }
+        }
+        exit failed
+    }
+' >&2
