@@ -43,7 +43,7 @@ A spec is one GitHub issue, in the repo where the work will happen, with the lab
 ## Approach
 How we plan to do it. Leave short if not yet agreed.
 
-- List changes with descriptions for what will change
+- List changes with descriptions for what will change, formatted similar to atomic commits.
 - Do not focus on backward compatibility.
 - Pay close attention to upgrade paths and if possible avoid any change that requires client effort.
 
